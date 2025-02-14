@@ -2,7 +2,7 @@ package com.aguilera.DomainEventConsumer.domain;
 
 import jakarta.persistence.Embedded;
 
-public class Telemetry {
+public class Telemetry extends DomainEntity {
   @Embedded
   private DeviceId deviceId;
   private Integer measurement;
@@ -13,6 +13,11 @@ public class Telemetry {
     this.deviceId = deviceId;
     this.measurement = measurement;
     this.creationTime = creationTime;
+    addDomainEvent(new TelemetryRecordedEvent(
+      deviceId.getValue(),
+      measurement,
+      creationTime.getValue().toString()
+    ));
   }
 
   public DeviceId getDeviceId() {

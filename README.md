@@ -36,11 +36,11 @@ Our new real system is going to be a streaming data processing, so we will imple
 1. A Springboot API endpoint that will receive the following payloads. You should be able to test it via a `curl` call like the following one:
 
 ```bash
-curl -H 'Content-Type: application/json' -d '{ "deviceId":1, "telemetry":10, "date": "2025-01-31T13:00:00Z"}' -X POST http://localhost:port/your-url
-curl -H 'Content-Type: application/json' -d '{ "deviceId":2, "telemetry": 8, "date": "2025-01-31T13:00:01Z"}' -X POST http://localhost:port/your-url
-curl -H 'Content-Type: application/json' -d '{ "deviceId":1, "telemetry":12, "date": "2025-01-31T13:00:05Z"}' -X POST http://localhost:port/your-url
-curl -H 'Content-Type: application/json' -d '{ "deviceId":2, "telemetry":19, "date": "2025-01-31T13:00:06Z"}' -X POST http://localhost:port/your-url
-curl -H 'Content-Type: application/json' -d '{ "deviceId":2, "telemetry":10, "date": "2025-01-31T13:00:11Z"}' -X POST http://localhost:port/your-url
+curl -H 'Content-Type: application/json' -d '{ "deviceId":1, "telemetry":10, "date": "2025-01-31T13:00:00Z"}' -X POST http://localhost:8080/telemetry
+curl -H 'Content-Type: application/json' -d '{ "deviceId":2, "telemetry": 8, "date": "2025-01-31T13:00:01Z"}' -X POST http://localhost:8080/telemetry
+curl -H 'Content-Type: application/json' -d '{ "deviceId":1, "telemetry":12, "date": "2025-01-31T13:00:05Z"}' -X POST http://localhost:8080/telemetry
+curl -H 'Content-Type: application/json' -d '{ "deviceId":2, "telemetry":19, "date": "2025-01-31T13:00:06Z"}' -X POST http://localhost:8080/telemetry
+curl -H 'Content-Type: application/json' -d '{ "deviceId":2, "telemetry":10, "date": "2025-01-31T13:00:11Z"}' -X POST http://localhost:8080/telemetry
 ```
 
 1. We need to see the Telemetry stored in any storage (e.g. Database, Key-Value store, etc.)

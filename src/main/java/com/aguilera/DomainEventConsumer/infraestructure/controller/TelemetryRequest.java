@@ -2,12 +2,12 @@ package com.aguilera.DomainEventConsumer.infraestructure.controller;
 
 public class TelemetryRequest {
   private Integer deviceId;
-  private Integer measurement;
+  private Integer telemetry;
   private String date;
 
-  public TelemetryRequest(Integer deviceId, Integer measurement, String date) {
+  public TelemetryRequest(Integer deviceId, Integer telemetry, String date) {
     this.deviceId = deviceId;
-    this.measurement = measurement;
+    this.telemetry = telemetry;
     this.date = date;
   }
 
@@ -19,12 +19,12 @@ public class TelemetryRequest {
     this.deviceId = deviceId;
   }
 
-  public Integer getMeasurement() {
-    return measurement;
+  public Integer getTelemetry() {
+    return telemetry;
   }
 
-  public void setMeasurement(Integer measurement) {
-    this.measurement = measurement;
+  public void setTelemetry(Integer telemetry) {
+    this.telemetry = telemetry;
   }
 
   public String getDate() {
