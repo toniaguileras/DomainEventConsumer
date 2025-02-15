@@ -4,14 +4,15 @@ import com.aguilera.DomainEventConsumer.domain.shared.DomainEvent;
 import org.springframework.context.ApplicationEvent;
 
 public class DomainEventAggregate extends ApplicationEvent {
-  private DomainEvent source;
+    private DomainEvent source;
 
-  public DomainEventAggregate(DomainEvent source) {
-    super(source);
-  }
+    public DomainEventAggregate(DomainEvent source) {
+        super(source);
+        this.source = source;
+    }
 
-  @Override
-  public DomainEvent getSource() {
-    return source;
-  }
+    @Override
+    public DomainEvent getSource() {
+        return source;
+    }
 }

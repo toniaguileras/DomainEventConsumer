@@ -9,6 +9,8 @@ import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
+import java.util.EventObject;
+
 @Component
 public class SpringDomainEventsConsumer {
   @Autowired
@@ -21,9 +23,11 @@ public class SpringDomainEventsConsumer {
   @Async
   @EventListener
   public void consume(DomainEventAggregate domainEventAggregate) {
-    DomainEvent event = domainEventAggregate.getSource();
-    if (event instanceof TelemetryRecordedEvent) {
-      telemetryRecordedHandler.handle((TelemetryRecordedEvent) event);
-    }
+   if(domainEventAggregate != null){
+     Object eventSource = ((EventObject) domainEventAggregate).getSource();
+     if (eventSource instanceof TelemetryRecordedEvent telemetryEvent) {
+       telemetryRecordedHandler.handle(telemetryEvent);
+     }
+   }
   }
 }
