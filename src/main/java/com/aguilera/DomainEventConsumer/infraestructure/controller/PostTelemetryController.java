@@ -19,7 +19,7 @@ public class PostTelemetryController {
   private static final Logger logger = LoggerFactory.getLogger(PostTelemetryController.class);
 
   @Autowired
-  private CreateTelemetry createTelemetry;
+  private final CreateTelemetry createTelemetry;
 
   public PostTelemetryController(CreateTelemetry createTelemetry) {this.createTelemetry = createTelemetry;}
 
