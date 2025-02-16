@@ -1,6 +1,6 @@
 package com.aguilera.DomainEventConsumer.infraestructure;
 
-import com.aguilera.DomainEventConsumer.application.RemoveOldTelemetries;
+import com.aguilera.DomainEventConsumer.application.telemetry.RemoveOldTelemetries;
 import com.aguilera.DomainEventConsumer.domain.TelemetryRecordedHandler;
 import com.aguilera.DomainEventConsumer.domain.TelemetryRepository;
 import com.aguilera.DomainEventConsumer.infraestructure.repository.H2TelemetryRepository;

@@ -1,9 +1,8 @@
-package com.aguilera.DomainEventConsumer.application;
+package com.aguilera.DomainEventConsumer.application.telemetry;
 
 import com.aguilera.DomainEventConsumer.domain.CreationTime;
 import com.aguilera.DomainEventConsumer.domain.DeviceId;
 import com.aguilera.DomainEventConsumer.domain.Telemetry;
-import com.aguilera.DomainEventConsumer.domain.TelemetryRecordedEvent;
 import com.aguilera.DomainEventConsumer.domain.TelemetryRepository;
 import com.aguilera.DomainEventConsumer.domain.shared.DomainEventPublisher;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -35,7 +36,7 @@ public class H2TelemetryRepository implements TelemetryRepository {
       """;
     try {
       return jdbcTemplate.query(sql, mapResultSetToTelemetry());
-    }catch (DataAccessException e){
+    } catch (DataAccessException e) {
       throw new FindTelemetryException(e);
     }
   }

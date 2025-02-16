@@ -2,6 +2,8 @@ package com.aguilera.DomainEventConsumer.domain;
 
 import jakarta.persistence.Embedded;
 
+import java.util.Objects;
+
 public class Telemetry extends DomainEntity {
   @Embedded
   private DeviceId deviceId;
@@ -42,5 +44,25 @@ public class Telemetry extends DomainEntity {
 
   public void setCreationTime(CreationTime creationTime) {
     this.creationTime = creationTime;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Telemetry telemetry = (Telemetry) o;
+    return Objects.equals(deviceId, telemetry.deviceId) && Objects.equals(
+      measurement,
+      telemetry.measurement
+    ) && Objects.equals(creationTime, telemetry.creationTime);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(deviceId, measurement, creationTime);
   }
 }

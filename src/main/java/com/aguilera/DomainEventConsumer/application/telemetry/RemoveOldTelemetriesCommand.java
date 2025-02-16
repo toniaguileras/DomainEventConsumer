@@ -1,4 +1,6 @@
-package com.aguilera.DomainEventConsumer.application;
+package com.aguilera.DomainEventConsumer.application.telemetry;
+
+import java.util.Objects;
 
 public class RemoveOldTelemetriesCommand {
   private Integer deviceId;
@@ -23,5 +25,22 @@ public class RemoveOldTelemetriesCommand {
 
   public void setCreatedOn(String createdOn) {
     this.createdOn = createdOn;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    RemoveOldTelemetriesCommand that = (RemoveOldTelemetriesCommand) o;
+    return Objects.equals(deviceId, that.deviceId) && Objects.equals(createdOn, that.createdOn);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(deviceId, createdOn);
   }
 }

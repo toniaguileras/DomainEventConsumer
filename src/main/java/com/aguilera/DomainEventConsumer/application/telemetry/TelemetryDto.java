@@ -1,6 +1,7 @@
-package com.aguilera.DomainEventConsumer.application;
+package com.aguilera.DomainEventConsumer.application.telemetry;
 
 import java.time.OffsetDateTime;
+import java.util.Objects;
 
 public class TelemetryDto {
 
@@ -36,5 +37,24 @@ public class TelemetryDto {
 
   public void setCreatedOn(OffsetDateTime createdOn) {
     this.createdOn = createdOn;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    TelemetryDto that = (TelemetryDto) o;
+    return Objects.equals(deviceId, that.deviceId)
+      && Objects.equals(measurement, that.measurement)
+      && Objects.equals(createdOn, that.createdOn);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(deviceId, measurement, createdOn);
   }
 }

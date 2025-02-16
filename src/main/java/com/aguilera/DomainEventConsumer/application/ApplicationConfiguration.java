@@ -1,8 +1,9 @@
 package com.aguilera.DomainEventConsumer.application;
 
+import com.aguilera.DomainEventConsumer.application.telemetry.CreateTelemetry;
+import com.aguilera.DomainEventConsumer.application.telemetry.FindTelemetry;
 import com.aguilera.DomainEventConsumer.domain.TelemetryRepository;
 import com.aguilera.DomainEventConsumer.domain.shared.DomainEventPublisher;
-import org.hibernate.annotations.processing.Find;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

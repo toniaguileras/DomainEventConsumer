@@ -1,7 +1,7 @@
 package com.aguilera.DomainEventConsumer.infraestructure.controller.telemetry;
 
-import com.aguilera.DomainEventConsumer.application.CreateTelemetry;
-import com.aguilera.DomainEventConsumer.application.TelemetryCommand;
+import com.aguilera.DomainEventConsumer.application.telemetry.CreateTelemetry;
+import com.aguilera.DomainEventConsumer.application.telemetry.TelemetryCommand;
 import com.aguilera.DomainEventConsumer.domain.exceptions.AlreadyExistsTelemetryException;
 import com.aguilera.DomainEventConsumer.domain.exceptions.SaveTelemetryException;
 import org.hibernate.mapping.Any;

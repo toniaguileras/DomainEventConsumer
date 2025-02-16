@@ -1,4 +1,6 @@
-package com.aguilera.DomainEventConsumer.application;
+package com.aguilera.DomainEventConsumer.application.telemetry;
+
+import java.util.Objects;
 
 public class TelemetryCommand {
   private Integer id;
@@ -33,5 +35,24 @@ public class TelemetryCommand {
 
   public void setDate(String date) {
     this.date = date;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    TelemetryCommand that = (TelemetryCommand) o;
+    return Objects.equals(id, that.id)
+      && Objects.equals(measurement, that.measurement)
+      && Objects.equals(date, that.date);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, measurement, date);
   }
 }

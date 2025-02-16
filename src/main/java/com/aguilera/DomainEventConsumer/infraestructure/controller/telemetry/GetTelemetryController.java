@@ -1,7 +1,7 @@
 package com.aguilera.DomainEventConsumer.infraestructure.controller.telemetry;
 
-import com.aguilera.DomainEventConsumer.application.FindTelemetry;
-import com.aguilera.DomainEventConsumer.application.TelemetryDto;
+import com.aguilera.DomainEventConsumer.application.telemetry.FindTelemetry;
+import com.aguilera.DomainEventConsumer.application.telemetry.TelemetryDto;
 import com.aguilera.DomainEventConsumer.domain.exceptions.FindTelemetryException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

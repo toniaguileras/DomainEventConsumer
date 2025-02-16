@@ -1,7 +1,7 @@
 package com.aguilera.DomainEventConsumer.infraestructure.streams.handlers;
 
-import com.aguilera.DomainEventConsumer.application.RemoveOldTelemetries;
-import com.aguilera.DomainEventConsumer.application.RemoveOldTelemetriesCommand;
+import com.aguilera.DomainEventConsumer.application.telemetry.RemoveOldTelemetries;
+import com.aguilera.DomainEventConsumer.application.telemetry.RemoveOldTelemetriesCommand;
 import com.aguilera.DomainEventConsumer.domain.TelemetryRecordedEvent;
 import com.aguilera.DomainEventConsumer.domain.TelemetryRecordedHandler;
 import org.springframework.beans.factory.annotation.Autowired;

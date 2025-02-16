@@ -1,4 +1,4 @@
-package com.aguilera.DomainEventConsumer.application;
+package com.aguilera.DomainEventConsumer.application.telemetry;
 
 import com.aguilera.DomainEventConsumer.domain.CreationTime;
 import com.aguilera.DomainEventConsumer.domain.DeviceId;
