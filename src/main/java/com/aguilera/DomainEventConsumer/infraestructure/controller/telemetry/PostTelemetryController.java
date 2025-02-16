@@ -1,4 +1,4 @@
-package com.aguilera.DomainEventConsumer.infraestructure.controller;
+package com.aguilera.DomainEventConsumer.infraestructure.controller.telemetry;
 
 import com.aguilera.DomainEventConsumer.application.CreateTelemetry;
 import com.aguilera.DomainEventConsumer.application.TelemetryCommand;
@@ -35,13 +35,13 @@ public class PostTelemetryController {
       ));
       return ResponseEntity.ok().build();
     } catch (AlreadyExistsTelemetryException e) {
-      logger.error("This telemetry already exists.", e);
+      logger.error("This telemetry already exists.", e.getCause());
       return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     } catch (SaveTelemetryException e) {
-      logger.error("There was a problem saving telemetry", e);
+      logger.error("There was a problem saving telemetry", e.getCause());
       return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     } catch (Exception e) {
-      logger.error("Unexpected error", e);
+      logger.error("Unexpected error", e.getCause());
       return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
   }

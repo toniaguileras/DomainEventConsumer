@@ -1,4 +1,4 @@
-package com.aguilera.DomainEventConsumer.infraestructure.controller;
+package com.aguilera.DomainEventConsumer.infraestructure.controller.telemetry;
 
 public class TelemetryRequest {
   private Integer deviceId;

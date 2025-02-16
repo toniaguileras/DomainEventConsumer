@@ -16,6 +16,10 @@ public class CreationTime implements Serializable {
     this.value = OffsetDateTime.parse(value);
   }
 
+  public CreationTime(OffsetDateTime value) {
+    this.value = value;
+  }
+
   public OffsetDateTime getValue() {
     return value;
   }
