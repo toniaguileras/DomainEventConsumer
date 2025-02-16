@@ -1,7 +1,5 @@
-package com.aguilera.DomainEventConsumer.application;
+package com.aguilera.DomainEventConsumer.application.telemetry;
 
-import com.aguilera.DomainEventConsumer.application.telemetry.RemoveOldTelemetries;
-import com.aguilera.DomainEventConsumer.application.telemetry.RemoveOldTelemetriesCommand;
 import com.aguilera.DomainEventConsumer.domain.CreationTime;
 import com.aguilera.DomainEventConsumer.domain.DeviceId;
 import com.aguilera.DomainEventConsumer.domain.TelemetryRepository;
@@ -11,7 +9,8 @@ import org.mockito.ArgumentCaptor;
 
 import java.time.OffsetDateTime;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;

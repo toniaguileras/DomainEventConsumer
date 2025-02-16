@@ -4,7 +4,6 @@ import com.aguilera.DomainEventConsumer.domain.shared.DomainEvent;
 import com.aguilera.DomainEventConsumer.domain.shared.DomainEventPublisher;
 import com.aguilera.DomainEventConsumer.infraestructure.streams.DomainEventAggregate;
 import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.annotation.Bean;
 
 import java.util.List;
 

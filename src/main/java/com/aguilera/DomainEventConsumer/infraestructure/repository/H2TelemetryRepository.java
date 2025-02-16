@@ -7,15 +7,12 @@ import com.aguilera.DomainEventConsumer.domain.TelemetryRepository;
 import com.aguilera.DomainEventConsumer.domain.exceptions.AlreadyExistsTelemetryException;
 import com.aguilera.DomainEventConsumer.domain.exceptions.FindTelemetryException;
 import com.aguilera.DomainEventConsumer.domain.exceptions.RemoveOldTelemetriesException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.aguilera.DomainEventConsumer.domain.exceptions.SaveTelemetryException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DuplicateKeyException;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-import com.aguilera.DomainEventConsumer.domain.exceptions.SaveTelemetryException;
 
 import java.time.OffsetDateTime;
 import java.util.List;

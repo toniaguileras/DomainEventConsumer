@@ -1,9 +1,8 @@
 package com.aguilera.DomainEventConsumer.infraestructure.streams.consumers;
 
 import com.aguilera.DomainEventConsumer.domain.TelemetryRecordedEvent;
-import com.aguilera.DomainEventConsumer.domain.shared.DomainEvent;
-import com.aguilera.DomainEventConsumer.infraestructure.streams.DomainEventAggregate;
 import com.aguilera.DomainEventConsumer.domain.TelemetryRecordedHandler;
+import com.aguilera.DomainEventConsumer.infraestructure.streams.DomainEventAggregate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;

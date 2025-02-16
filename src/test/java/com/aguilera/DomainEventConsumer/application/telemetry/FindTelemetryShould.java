@@ -4,20 +4,14 @@ import com.aguilera.DomainEventConsumer.domain.CreationTime;
 import com.aguilera.DomainEventConsumer.domain.DeviceId;
 import com.aguilera.DomainEventConsumer.domain.Telemetry;
 import com.aguilera.DomainEventConsumer.domain.TelemetryRepository;
-import org.assertj.core.data.Offset;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
-import org.mockito.internal.matchers.Find;
-import org.springframework.util.Assert;
 
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 class FindTelemetryShould {
